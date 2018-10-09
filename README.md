@@ -8,7 +8,7 @@ a PPP connection.
 
 <b>Getting Started:</b>
 
-To use the LARA-R203 modem hat we need to configuire the device tree overlay to enable UART0 on the Raspberry Pi3. We
+To use the Ublox LARA-R203 hat we need to configure the device tree overlay to enable UART0 on the Raspberry Pi3. We
 do this by adding the following ```dtoverlay=pi3-disalbe-bt``` to the ```/boot/config.txt```. Next disable the hciuart in system service. This is done by issuing the following command: ```sudo systemctl disable hciuart```. Next, we need to remove the ```console=serial0,115200``` from ```/boot/cmdline.txt``` to disable console output on serial0. Finally reboot the Pi and we are ready to communicate with the modem.
 
 All of these tasks are handled in the ```setup.sh``` script documented below. Simply run the script and reboot; the Pi will establish a PPP connnection when it boots up.
